@@ -1,0 +1,88 @@
+:root{
+    --Color-fondo: #1e061e;
+    --Probando-paleta: #bb71ba;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.5rem;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;   
+    grid-template-columns: auto 1fr;
+    background-color: var(--Color-fondo);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main{
+padding: min(30px, 7%); 
+color: white;
+border: solid 1px white
+}
+
+main p {
+    
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--Probando-paleta);
+    border-radius: 10px;
+}
+
+/*estilos a mi  aca el navbar,listas etc*/
+
+.sidebar {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: var(--Probando-paleta);
+  border: 1px solid white;
+}
+
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar
+
+.sidebar ul li {
+    margin: 1.5rem 0;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/*estilando mi logo*/
+
+.logo{
+    width: 100px;
+    height: 80px;
+}
+
+
+
+.footer {
+    background-color: var(--Probando-paleta);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: #fffaff solid 1px;
+}
