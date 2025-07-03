@@ -47,7 +47,11 @@ main p {
   padding: 5px 1em;
   background-color: var(--Probando-paleta);
   border: 1px solid white;
+  transition: width 0.3s ease;  
 }
+
+/*hmmm*/ 
+
 
 
 .sidebar ul {
@@ -87,21 +91,18 @@ main p {
   height: 40px;
   margin: 1rem auto;
 }
-
-body.active main {
-  margin-left: 60px; /* ajusta main cuando sidebar está cerrado */
-}
-
+/* Estilos para el botón de menú */ 
 /* Cuando sidebar está abierto */
 body:not(.active) main {
-  margin-left: 250px; /* ancho normal */
   transition: margin-left 0.3s ease;
 }
 
-.sidebar {
-  transition: width 0.3s ease;
-}
 
+.sidebar-header {
+    display: flex;
+    justify-content: right;
+    
+}
 /*estilando mi logo*/
 
 .logo{
