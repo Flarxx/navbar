@@ -76,21 +76,25 @@ main p {
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .sidebar.close {
-  width: 60px; /* tamaño reducido para mostrar solo iconos */
+  width: 50px; /* tamaño reducido para mostrar solo iconos */
   padding: 5px 0.5em;
 }
 
 .sidebar.close ul li a span {
   display: none; /* oculta los textos */
 }
+/* quito el logo cuando esta cerrado el navbar*/
 
-.sidebar.close .logo {
-  width: 40px;
-  height: 40px;
-  margin: 1rem auto;
+
+.sidebar.close ul li img {
+  display: none;
 }
+
 /* Estilos para el botón de menú */ 
 /* Cuando sidebar está abierto */
 body:not(.active) main {
@@ -103,13 +107,14 @@ body:not(.active) main {
     justify-content: right;
     
 }
+
 /*estilando mi logo*/
 
 .logo{
 
     margin-top: 2rem;
-    width: 100px;
-    height: 80px;
+    width: 140px;
+    height: 90px;
 }
 
 
@@ -124,3 +129,86 @@ body:not(.active) main {
     width: 100%;
     border: #fffaff solid 1px;
 }
+
+/* Probando animaciones del button*/ 
+
+.sidebar-toggle.rotate i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/*  Dando estilo para mi navbar cuando este version mobile */
+
+@media screen and (max-width: 768px) {
+    
+    .sidebar {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 80px;
+        background-color: --Probando-paleta
+        z-index: 10;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .sidebar ul li {
+        margin: 0;
+    }
+
+    .sidebar ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #fff9f9;
+    }
+
+    .sidebar ul li a span {
+        font-size: 0.8rem;
+   
+    }
+
+    .sidebar img {
+
+        width: 90px;
+        height: 7%;
+        margin-bottom: 30px;
+    }
+
+    .icon-mobile-hide {
+    display: none;
+  }
+
+  .sidebar.close {
+    width: 100%; /* tamaño reducido para mostrar solo iconos */
+    padding: 5px 0.5em;
+    height: 80px;
+    color: white;
+  }
+    .sidebar.close ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;}
+
+   .sidebar.close ul li img {
+    display: inline-block;
+    width: 90px; /* o el tamaño que quieras */
+    margin-bottom: 15px; /* ajusta margen si quieres */
+    height: auto; 
+  }
+
+}
+
+
