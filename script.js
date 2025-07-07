@@ -11,6 +11,10 @@ toggleButton.addEventListener('click', () => {
   } else {
     toggleButton.innerHTML = '<i class="fa-solid fa-backward"></i>';
   }
+
+  /*quiero alternar las clase active  en los enlaces (a) cuando le de click */
+
+
 });
 // Añadir un evento de clic a los enlaces del sidebar
 
